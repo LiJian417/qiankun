@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>乾坤 — 心理能量测试</title>
+    <meta name="description" content="乾坤 — 一场触及灵魂的心理测试，35道题，中英法三语，循序渐进，为你的心灵注入力量。" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☯</text></svg>" />
+  </head>
+  <body>
+    <div class="stars-bg"></div>
+
+    <!-- ═══ 启动页 ═══ -->
+    <div id="page-start" class="page">
+      <div class="lang-switcher"></div>
+
+      <div class="logo-wrap">
+        <div class="logo-symbol">☯</div>
+        <div class="logo-title">乾坤</div>
+        <div class="logo-sub">心理能量测试</div>
+      </div>
+
+      <div class="features">
+        <div class="feature-item"><div class="feature-icon">◯</div><div class="feature-label">探索自我</div></div>
+        <div class="feature-item"><div class="feature-icon">✦</div><div class="feature-label">触及灵魂</div></div>
+        <div class="feature-item"><div class="feature-icon">♡</div><div class="feature-label">心灵滋养</div></div>
+      </div>
+
+      <div class="start-card">
+        <p class="start-desc"></p>
+        <button id="btn-start" class="btn-primary">开始探索</button>
+        <div style="margin-top: 16px;">
+          <button id="btn-settings" class="btn-ghost">题库设置</button>
+        </div>
+      </div>
+
+      <div class="footer-hint">☯ 乾坤 · 身心赋能</div>
+    </div>
+
+    <!-- ═══ 题目页 ═══ -->
+    <div id="page-question" class="page">
+      <div class="progress-bar-wrap">
+        <div class="progress-info">
+          <span class="current">1 / 30</span>
+          <span class="label" style="color: var(--gold-dim);">能量聚集中</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="question-num">第 1 题</div>
+      <div class="question-text"></div>
+      <div class="options"></div>
+    </div>
+
+    <!-- ═══ 鼓励弹层 ═══ -->
+    <div class="encouragement-overlay">
+      <div class="encouragement-card">
+        <div class="encouragement-glyph">✦</div>
+        <div class="encouragement-text"></div>
+        <div class="encouragement-hint">下一题正在到来...</div>
+      </div>
+    </div>
+
+    <!-- ═══ 结果页 ═══ -->
+    <div id="page-result" class="page">
+      <div class="result-level"></div>
+      <div class="result-title"></div>
+      <div class="result-subtitle"></div>
+
+      <div class="result-stats">
+        <div class="stat-item stat-energy">
+          <div class="stat-num">0%</div>
+          <div class="stat-label">心理能量</div>
+        </div>
+        <div class="stat-item stat-answers">
+          <div class="stat-num">0题</div>
+          <div class="stat-label">完成题目</div>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-message"></div>
+        <div class="result-divider"></div>
+        <div class="result-quote"></div>
+      </div>
+
+      <div class="share-section-title" style="font-size: 14px; color: var(--text-dim); margin-bottom: 12px; letter-spacing: 2px;">分享</div>
+
+      <div class="share-btns" style="flex-wrap: wrap;">
+        <!-- 国际社交 -->
+        <button class="share-btn twitter" title="Twitter / X">
+          <span>X</span>
+        </button>
+        <button class="share-btn whatsapp" title="WhatsApp">
+          <span>WA</span>
+        </button>
+        <button class="share-btn facebook" title="Facebook">
+          <span>FB</span>
+        </button>
+        <button class="share-btn telegram" title="Telegram">
+          <span>TG</span>
+        </button>
+        <button class="share-btn linkedin" title="LinkedIn">
+          <span>IN</span>
+        </button>
+        <button class="share-btn native">
+          <span>系统分享</span>
+        </button>
+        <button class="share-btn copy">
+          <span>复制内容</span>
+        </button>
+      </div>
+
+      <button id="btn-restart" class="btn-ghost" style="margin-bottom: 12px; margin-top: 8px;">再做一次</button>
+      <div class="restart-hint">每次题目顺序随机，体验不同</div>
+      <div class="footer-hint">☯ 乾坤 · 身心赋能</div>
+    </div>
+
+    <!-- ═══ 设置页 ═══ -->
+    <div id="page-settings" class="page">
+      <div class="logo-symbol" style="font-size: 36px; margin-bottom: 8px;">☯</div>
+      <div class="settings-page-title" style="font-size: 20px; font-weight: 600; margin-bottom: 24px;">设置</div>
+
+      <div class="settings-wrap">
+        <div class="setting-row">
+          <div class="setting-label-q">题目数量</div>
+          <div class="stepper">
+            <button class="stepper-btn minus">−</button>
+            <div class="stepper-val">30</div>
+            <button class="stepper-btn plus">+</button>
+          </div>
+        </div>
+        <div class="settings-note" style="text-align: center; font-size: 12px; color: var(--text-dim); margin-top: 12px; line-height: 1.8;">
+          题库共 35 道题，每次随机抽取<br/>题目无对错，请按直觉作答
+        </div>
+      </div>
+
+      <div id="btn-settings-back" class="back-link">← 返回</div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "appId": "com.qiankun.app",
+  "appName": "乾坤",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
